@@ -1,0 +1,26 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="card card-size">
+        <h1 class="text-centre spacing">Search Train</h1>
+    
+    
+    <div>
+        <label>From : </label>
+        <input type="text" placeholder="From" name="From" #From="ngModel" [(ngModel)]="searchTrain.From" >
+    </div>
+
+    <div>
+        <label>To   : </label>
+        <input type="text" placeholder="To" name="To" #To="ngModel" [(ngModel)]="searchTrain.To">
+    </div>
+    
+    <div>
+        <label>Date : </label>
+        <input type="date" placeholder="Date" name="TrainDate" #Date="ngModel" [(ngModel)]="searchTrain.TrainDate">
+    </div>
+    
+    <div>
+         <button type="search">Search</button>
+    </div>
+</div>
+</form>
+{{searchTrain | json}}
